@@ -1,0 +1,203 @@
+$lightBlue: #72D2EB;
+$blue: #166A8E;
+$blue80: #166A8Ecc;
+$darkBlue: #2a4e6c;
+$darkBlue80: #2a4e6ccc;
+$black50: #00000080;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/** GENERAL **/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+    color: #eee;
+}
+
+a {
+    text-decoration: none;
+    color: $blue;
+
+    &:hover {
+        color: $lightBlue;
+    }
+}
+
+.btn {
+    border: 2px solid $lightBlue;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: $lightBlue;
+    color: #333;
+    cursor: pointer;
+    transition: all .2s ease-in;
+
+    &:hover {
+        background: #eee;
+    }
+}
+
+/** HEADER **/
+
+header {
+    height: 75px;
+
+
+
+    i {
+        font-size: 2em;
+        display: block;
+    }
+
+    .fa-bars, .fa-times {
+        float: right;
+        padding-right: 10px;
+        cursor: pointer;
+    }
+
+
+}
+
+.icons {
+    background: #fff;
+    position: fixed;
+    width: 100vw;
+    padding: 20px;
+}
+
+
+
+nav {
+    float: right;
+    position: fixed;
+    top: 75px;
+    right: 0px;
+    background: $black50;
+    height: 100vh;
+    padding: 25px;
+    font-size: 2em;
+    transition: right .4s ease-in-out;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            padding: 15px;
+        }
+    }
+}
+
+.hide-nav {
+    right: -200px;
+}
+
+/** HERO **/
+
+.hero {
+    width: 100vw;
+    height: 80vh;
+    background-image: linear-gradient($blue80, $darkBlue80),
+    url(./img/hero.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #eee;
+    
+    p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+}
+
+/** SUBSCRIBE POPUP **/
+.subscribe-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: $black50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.form-container, .thanks {
+    width: 50vw;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+
+    h2, p, input {
+        margin-bottom: 25px;
+    }
+
+    input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+.close-form {
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.close-btn {
+    align-self: center;
+}
+
+/** ABOUT **/
+.about {
+    padding: 50px;
+
+    p {
+        max-width: 500px;
+        margin: 15px auto;
+    }
+}
+
+
+/** FOOTER **/
+footer {
+    background-color: $lightBlue;
+    display: flex;
+    padding: 25px;
+    justify-content: space-around;
+
+    h2 {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    section {
+        width: 30%;
+        padding: 15px;
+    }
+}
+
+/** MEDIA QUERIES **/
+
+.hide-item {
+    display: none;
+}
